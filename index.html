@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rohit Kumar - Front End Developer, Website Designer & Graphic Designer based in Chandigarh. Specializing in React, WordPress, and modern web technologies.">
+    <meta name="keywords" content="Rohit Kumar, Front End Developer, Web Designer, React Developer, WordPress, Portfolio, Chandigarh">
+    <meta name="author" content="Rohit Kumar">
+    <title>Rohit Kumar | Front End Developer & Designer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="loader-letter" style="--delay: 0">R</span>
+                <span class="loader-letter" style="--delay: 1">O</span>
+                <span class="loader-letter" style="--delay: 2">H</span>
+                <span class="loader-letter" style="--delay: 3">I</span>
+                <span class="loader-letter" style="--delay: 4">T</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">RK</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Hire Me</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-grid-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge" data-animate="fade-up">
+                    <span class="badge-dot"></span>
+                    Available for Freelance Work
+                </div>
+                <h1 class="hero-title" data-animate="fade-up" data-delay="100">
+                    Hi, I'm <span class="highlight">Rohit Kumar</span>
+                </h1>
+                <div class="hero-typing-wrapper" data-animate="fade-up" data-delay="200">
+                    <span class="typing-label">I'm a</span>
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-description" data-animate="fade-up" data-delay="300">
+                    Passionate about crafting beautiful, responsive, and user-centric digital experiences. 
+                    Transforming ideas into pixel-perfect reality with modern web technologies.
+                </p>
+                <div class="hero-buttons" data-animate="fade-up" data-delay="400">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="hero-stats" data-animate="fade-up" data-delay="500">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="8">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="1">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual" data-animate="fade-left" data-delay="200">
+                <div class="hero-image-container">
+                    <div class="hero-image-ring"></div>
+                    <div class="hero-image-ring ring-2"></div>
+                    <div class="hero-image-wrapper">
+                        <img src="assets/images/hero-profile.png" alt="Rohit Kumar - Front End Developer" class="hero-image">
+                    </div>
+                    <div class="floating-badge badge-react">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div class="floating-badge badge-js">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <div class="floating-badge badge-wordpress">
+                        <i class="fab fa-wordpress"></i>
+                    </div>
+                    <div class="floating-badge badge-figma">
+                        <i class="fab fa-figma"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag"><i class="fas fa-user"></i> About Me</span>
+                <h2 class="section-title">Get To Know <span class="highlight">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-col" data-animate="fade-right">
+                    <div class="about-image-card">
+                        <img src="assets/images/hero-profile.png" alt="Rohit Kumar" class="about-image">
+                        <div class="about-image-overlay">
+                            <div class="about-exp-badge">
+                                <span class="exp-number">1.5+</span>
+                                <span class="exp-text">Years of<br>Experience</span>
+                            </div>
+                        </div>
+                        <div class="about-image-border"></div>
+                    </div>
+                </div>
+                <div class="about-content-col" data-animate="fade-left">
+                    <h3 class="about-subtitle">A Passionate Developer Based in <span class="highlight">Chandigarh, India</span></h3>
+                    <p class="about-text">
+                        I'm Rohit Kumar, a 22-year-old Front End Developer & Designer with a passion for creating stunning digital experiences. 
+                        With expertise in React.js, WordPress, and modern CSS frameworks, I transform creative visions into functional, 
+                        beautiful websites that leave lasting impressions.
+                    </p>
+                    <p class="about-text">
+                        My journey into web development started with a professional training at Visual Media Academy, where I honed my skills 
+                        in web designing and front-end development. Since then, I've built multiple live projects for real clients, 
+                        including logistics companies, shipping businesses, and educational institutions.
+                    </p>
+                    <div class="about-info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <span class="info-label">Name</span>
+                                <span class="info-value">Rohit Kumar</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <span class="info-label">Age</span>
+                                <span class="info-value">22 Years</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <span class="info-label">Phone</span>
+                                <span class="info-value">+91 9877934334</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="info-label">Email</span>
+                                <span class="info-value">rohitkumar837r@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Sector 37-C, Chandigarh</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <span class="info-label">Freelance</span>
+                                <span class="info-value available">Available</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Contact Me</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                        <div class="about-social">
+                            <a href="https://github.com/" class="social-icon" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/" class="social-icon" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:rohitkumar837r@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag"><i class="fas fa-briefcase"></i> What I Do</span>
+                <h2 class="section-title">My <span class="highlight">Services</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-animate="fade-up" data-delay="0">
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="service-icon-bg"></div>
+                    </div>
+                    <h3 class="service-title">Front End Development</h3>
+                    <p class="service-desc">Building responsive, performant web applications using React.js, JavaScript, and modern CSS frameworks like Bootstrap and Tailwind.</p>
+                    <div class="service-technologies">
+                        <span>React</span><span>JavaScript</span><span>Bootstrap</span>
+                    </div>
+                </div>
+                <div class="service-card" data-animate="fade-up" data-delay="100">
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="service-icon-bg"></div>
+                    </div>
+                    <h3 class="service-title">Website Design</h3>
+                    <p class="service-desc">Creating visually stunning and user-friendly website designs with attention to detail, modern aesthetics, and great user experience.</p>
+                    <div class="service-technologies">
+                        <span>UI/UX</span><span>Figma</span><span>Photoshop</span>
+                    </div>
+                </div>
+                <div class="service-card" data-animate="fade-up" data-delay="200">
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fab fa-wordpress"></i>
+                        </div>
+                        <div class="service-icon-bg"></div>
+                    </div>
+                    <h3 class="service-title">WordPress Development</h3>
+                    <p class="service-desc">Building custom WordPress websites with themes, plugins, and e-commerce functionality. Delivered 4+ live WordPress projects.</p>
+                    <div class="service-technologies">
+                        <span>WordPress</span><span>WooCommerce</span><span>PHP</span>
+                    </div>
+                </div>
+                <div class="service-card" data-animate="fade-up" data-delay="300">
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="service-icon-bg"></div>
+                    </div>
+                    <h3 class="service-title">Graphic Design</h3>
+                    <p class="service-desc">Designing eye-catching graphics, social media posts, banners, logos, and marketing materials using Photoshop and Canva.</p>
+                    <div class="service-technologies">
+                        <span>Photoshop</span><span>Canva</span><span>Illustrator</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag"><i class="fas fa-cogs"></i> My Expertise</span>
+                <h2 class="section-title">Skills & <span class="highlight">Technologies</span></h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="skills-tabs">
+                <button class="skills-tab active" data-tab="technologies">
+                    <i class="fas fa-laptop-code"></i> Technologies
+                </button>
+                <button class="skills-tab" data-tab="tools">
+                    <i class="fas fa-tools"></i> Tools
+                </button>
+            </div>
+
+            <div class="skills-content">
+                <!-- Technologies Tab -->
+                <div class="skills-panel active" id="technologies">
+                    <div class="skills-grid">
+                        <div class="skill-card" data-animate="fade-up" data-delay="0">
+                            <div class="skill-icon" style="--skill-color: #E44D26">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="95" style="--skill-color: #E44D26"></div>
+                            </div>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-card" data-animate="fade-up" data-delay="50">
+                            <div class="skill-icon" style="--skill-color: #1572B6">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <span class="skill-name">CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="90" style="--skill-color: #1572B6"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-card" data-animate="fade-up" data-delay="100">
+                            <div class="skill-icon" style="--skill-color: #7952B3">
+                                <i class="fab fa-bootstrap"></i>
+                            </div>
+                            <span class="skill-name">Bootstrap</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="88" style="--skill-color: #7952B3"></div>
+                            </div>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-card" data-animate="fade-up" data-delay="150">
+                            <div class="skill-icon" style="--skill-color: #38BDF8">
+                                <i class="fab fa-css3"></i>
+                            </div>
+                            <span class="skill-name">Tailwind CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="85" style="--skill-color: #38BDF8"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-card" data-animate="fade-up" data-delay="200">
+                            <div class="skill-icon" style="--skill-color: #F7DF1E">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="82" style="--skill-color: #F7DF1E"></div>
+                            </div>
+                            <span class="skill-percent">82%</span>
+                        </div>
+                        <div class="skill-card" data-animate="fade-up" data-delay="250">
+                            <div class="skill-icon" style="--skill-color: #61DAFB">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span class="skill-name">React.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="80" style="--skill-color: #61DAFB"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-card" data-animate="fade-up" data-delay="300">
+                            <div class="skill-icon" style="--skill-color: #764ABC">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span class="skill-name">Redux</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="75" style="--skill-color: #764ABC"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-card" data-animate="fade-up" data-delay="350">
+                            <div class="skill-icon" style="--skill-color: #21759B">
+                                <i class="fab fa-wordpress"></i>
+                            </div>
+                            <span class="skill-name">WordPress</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="88" style="--skill-color: #21759B"></div>
+                            </div>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools Tab -->
+                <div class="skills-panel" id="tools">
+                    <div class="tools-grid">
+                        <div class="tool-card" data-animate="fade-up" data-delay="0">
+                            <div class="tool-icon-wrapper">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <span class="tool-name">ChatGPT</span>
+                            <span class="tool-category">AI Assistant</span>
+                        </div>
+                        <div class="tool-card" data-animate="fade-up" data-delay="50">
+                            <div class="tool-icon-wrapper">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <span class="tool-name">Gemini</span>
+                            <span class="tool-category">AI Assistant</span>
+                        </div>
+                        <div class="tool-card" data-animate="fade-up" data-delay="100">
+                            <div class="tool-icon-wrapper">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <span class="tool-name">Claude</span>
+                            <span class="tool-category">AI Assistant</span>
+                        </div>
+                        <div class="tool-card" data-animate="fade-up" data-delay="150">
+                            <div class="tool-icon-wrapper">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span class="tool-name">VS Code</span>
+                            <span class="tool-category">Code Editor</span>
+                        </div>
+                        <div class="tool-card" data-animate="fade-up" data-delay="200">
+                            <div class="tool-icon-wrapper">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <span class="tool-name">GitHub</span>
+                            <span class="tool-category">Version Control</span>
+                        </div>
+                        <div class="tool-card" data-animate="fade-up" data-delay="250">
+                            <div class="tool-icon-wrapper">
+                                <i class="fas fa-magic"></i>
+                            </div>
+                            <span class="tool-name">Photoshop</span>
+                            <span class="tool-category">Design Tool</span>
+                        </div>
+                        <div class="tool-card" data-animate="fade-up" data-delay="300">
+                            <div class="tool-icon-wrapper">
+                                <i class="fas fa-pencil-ruler"></i>
+                            </div>
+                            <span class="tool-name">Canva</span>
+                            <span class="tool-category">Design Tool</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag"><i class="fas fa-rocket"></i> My Portfolio</span>
+                <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="project-filters" data-animate="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="wordpress">WordPress</button>
+                <button class="filter-btn" data-filter="react">React</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="wordpress" data-animate="fade-up" data-delay="0">
+                    <div class="project-image">
+                        <img src="assets/images/project-nahar.png" alt="Nahar Logistics Website">
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <a href="https://naharlogistics.com/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">WordPress</span>
+                            <span class="project-tag">Responsive</span>
+                        </div>
+                        <h3 class="project-title">Nahar Logistics</h3>
+                        <p class="project-desc">A professional logistics company website with full service showcasing, fleet management details, and inquiry system.</p>
+                        <a href="https://naharlogistics.com/" target="_blank" class="project-view">
+                            Visit Live Site <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="wordpress" data-animate="fade-up" data-delay="100">
+                    <div class="project-image">
+                        <img src="assets/images/project-bhagirathe.png" alt="Bhagirathe Ship Website">
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <a href="https://bhagiratheship.com/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">WordPress</span>
+                            <span class="project-tag">Maritime</span>
+                        </div>
+                        <h3 class="project-title">Bhagirathe Ship</h3>
+                        <p class="project-desc">Maritime shipping company website featuring fleet showcase, route information, and professional corporate design.</p>
+                        <a href="https://bhagiratheship.com/" target="_blank" class="project-view">
+                            Visit Live Site <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="wordpress" data-animate="fade-up" data-delay="200">
+                    <div class="project-image">
+                        <img src="assets/images/project-webliquid.png" alt="Web Liquid Studio Website">
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <a href="https://webliquidstudio.com/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">WordPress</span>
+                            <span class="project-tag">Agency</span>
+                        </div>
+                        <h3 class="project-title">Web Liquid Studio</h3>
+                        <p class="project-desc">A creative digital agency website showcasing web development and design services with a modern premium aesthetic.</p>
+                        <a href="https://webliquidstudio.com/" target="_blank" class="project-view">
+                            Visit Live Site <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="wordpress" data-animate="fade-up" data-delay="300">
+                    <div class="project-image">
+                        <img src="assets/images/hero-bg.png" alt="Visual Media Academy Website">
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <a href="https://visualmediaacademy.com/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">WordPress</span>
+                            <span class="project-tag">Education</span>
+                        </div>
+                        <h3 class="project-title">Visual Media Academy</h3>
+                        <p class="project-desc">An educational institution website featuring courses, admissions, testimonials, and campus information with dynamic UI.</p>
+                        <a href="https://visualmediaacademy.com/" target="_blank" class="project-view">
+                            Visit Live Site <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-category="react" data-animate="fade-up" data-delay="400">
+                    <div class="project-image">
+                        <img src="assets/images/about-bg.png" alt="E-Commerce React App">
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">React.js</span>
+                            <span class="project-tag">Supabase</span>
+                            <span class="project-tag">E-Commerce</span>
+                        </div>
+                        <h3 class="project-title">E-Commerce Store</h3>
+                        <p class="project-desc">A full-featured e-commerce application built with React.js and Supabase, featuring product listings, cart, checkout, and fully responsive animated design.</p>
+                        <a href="#" class="project-view">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education section" id="education">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag"><i class="fas fa-graduation-cap"></i> My Journey</span>
+                <h2 class="section-title">Education & <span class="highlight">Experience</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="timeline-grid">
+                <div class="timeline-col">
+                    <h3 class="timeline-col-title" data-animate="fade-up">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </h3>
+                    <div class="timeline">
+                        <div class="timeline-item" data-animate="fade-right" data-delay="0">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <span class="timeline-date">2019 - 2020</span>
+                                <h4 class="timeline-title">10th Standard</h4>
+                                <p class="timeline-institution"><i class="fas fa-school"></i> Govt. Model Senior Secondary School</p>
+                                <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Sector 37-B, Chandigarh</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-animate="fade-right" data-delay="100">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <span class="timeline-date">2021 - 2022</span>
+                                <h4 class="timeline-title">12th Standard</h4>
+                                <p class="timeline-institution"><i class="fas fa-school"></i> Govt. Model Senior Secondary School</p>
+                                <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Sector 14 West, Chandigarh</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-animate="fade-right" data-delay="200">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <span class="timeline-date">2022 - 2024</span>
+                                <h4 class="timeline-title">Diploma in Bakery & Confectionery</h4>
+                                <p class="timeline-subtitle">1.5 Year Diploma Program</p>
+                                <p class="timeline-institution"><i class="fas fa-university"></i> Chandigarh Institute of Hotel Management & Catering Technology</p>
+                                <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Sector 42-D, Chandigarh</p>
+                                <p class="timeline-extra"><i class="fas fa-award"></i> 6 Months Industrial Training at Hotel Mountview</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-col">
+                    <h3 class="timeline-col-title" data-animate="fade-up">
+                        <i class="fas fa-briefcase"></i> Experience
+                    </h3>
+                    <div class="timeline">
+                        <div class="timeline-item" data-animate="fade-left" data-delay="0">
+                            <div class="timeline-dot active-dot"></div>
+                            <div class="timeline-card featured">
+                                <span class="timeline-date">Professional Training</span>
+                                <h4 class="timeline-title">Web Design & Front End Development</h4>
+                                <p class="timeline-institution"><i class="fas fa-building"></i> Visual Media Academy</p>
+                                <p class="timeline-desc">Comprehensive training in web designing and front-end development with React.js. Learned modern web technologies, responsive design, and real-world project development.</p>
+                                <div class="timeline-tech-tags">
+                                    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-animate="fade-left" data-delay="100">
+                            <div class="timeline-dot active-dot"></div>
+                            <div class="timeline-card featured">
+                                <span class="timeline-date">3 Months Internship</span>
+                                <h4 class="timeline-title">Web Design Intern</h4>
+                                <p class="timeline-institution"><i class="fas fa-building"></i> Visual Media Academy</p>
+                                <p class="timeline-desc">Completed a 3-month internship building live projects for real clients. Gained hands-on experience in WordPress development and responsive web design.</p>
+                                <div class="timeline-tech-tags">
+                                    <span>WordPress</span><span>Web Design</span><span>Live Projects</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-animate="fade-left" data-delay="200">
+                            <div class="timeline-dot active-dot"></div>
+                            <div class="timeline-card featured">
+                                <span class="timeline-date">Live Projects</span>
+                                <h4 class="timeline-title">Projects Built During Internship</h4>
+                                <div class="timeline-projects">
+                                    <a href="https://visualmediaacademy.com" target="_blank" class="timeline-project-link">
+                                        <i class="fas fa-globe"></i> visualmediaacademy.com
+                                    </a>
+                                    <a href="https://webliquidstudio.com" target="_blank" class="timeline-project-link">
+                                        <i class="fas fa-globe"></i> webliquidstudio.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag"><i class="fas fa-envelope"></i> Get In Touch</span>
+                <h2 class="section-title">Contact <span class="highlight">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info-col" data-animate="fade-right">
+                    <h3 class="contact-subtitle">Let's Work Together!</h3>
+                    <p class="contact-text">
+                        Have a project in mind or want to collaborate? Feel free to reach out. 
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                    </p>
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-card-info">
+                                <span class="contact-card-label">Call Me</span>
+                                <a href="tel:+919877934334" class="contact-card-value">+91 9877934334</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-card-info">
+                                <span class="contact-card-label">Email Me</span>
+                                <a href="mailto:rohitkumar837r@gmail.com" class="contact-card-value">rohitkumar837r@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-card-info">
+                                <span class="contact-card-label">Location</span>
+                                <span class="contact-card-value">#2032/2, Sector 37-C, Chandigarh</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social-links">
+                        <a href="https://github.com/" target="_blank" class="contact-social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/" target="_blank" class="contact-social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="contact-social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/" target="_blank" class="contact-social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-col" data-animate="fade-left">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                                <span class="form-highlight"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+                                <span class="form-highlight"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Discussion" required>
+                            <span class="form-highlight"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about your project..." rows="5" required></textarea>
+                            <span class="form-highlight"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-glow"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>
+                        <span class="logo-text">RK</span>
+                        <span class="logo-bracket">/&gt;</span>
+                    </a>
+                    <p class="footer-desc">Front End Developer & Designer crafting beautiful digital experiences from Chandigarh, India.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-title">Services</h4>
+                    <a href="#services">Web Development</a>
+                    <a href="#services">Website Design</a>
+                    <a href="#services">WordPress</a>
+                    <a href="#services">Graphic Design</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rohit Kumar. All rights reserved.</p>
+                <p>Designed & Built with <span class="footer-heart">❤</span> by Rohit Kumar</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
