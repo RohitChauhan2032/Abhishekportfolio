@@ -277,17 +277,45 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
         submitBtn.disabled = true;
 
-        setTimeout(() => {
+        const formData = new FormData(contactForm);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            subject: formData.get('subject'),
+            message: formData.get('message')
+        };
+
+        fetch('https://formsubmit.co/ajax/rohitkumar837r@gmail.com', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(res => {
             submitBtn.innerHTML = '<span>Message Sent!</span><i class="fas fa-check"></i>';
             submitBtn.style.background = 'linear-gradient(135deg, #00D4AA, #00B894)';
             contactForm.reset();
-
+        })
+        .catch(error => {
+            console.error('Error submitting form:', error);
+            submitBtn.innerHTML = '<span>Failed to Send</span><i class="fas fa-times"></i>';
+            submitBtn.style.background = 'linear-gradient(135deg, #FF4B4B, #FF2F2F)';
+        })
+        .finally(() => {
             setTimeout(() => {
                 submitBtn.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
                 submitBtn.style.background = '';
                 submitBtn.disabled = false;
-            }, 3000);
-        }, 1500);
+            }, 4000);
+        });
     });
 
     // ==========================================
