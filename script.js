@@ -93,8 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const typingTexts = [
         'UI/UX Designer',
         'Graphic Designer',
-        'WordPress Designer',
-        'Website Designer',
         'Creative Designer'
     ];
 
