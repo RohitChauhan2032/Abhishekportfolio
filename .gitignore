@@ -12,3 +12,9 @@ desktop.ini
 
 # Logs
 *.log
+
+# Temp Source Image Directories
+mobile-app/
+social-media-post/
+websites-mokups/
+assets/images/project-social-*.png
