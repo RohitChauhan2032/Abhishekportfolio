@@ -683,20 +683,28 @@ ul, ol {
     animation: float 3s ease-in-out infinite;
 }
 
-.badge-react {
-    top: 20px;
-    right: 10px;
-    background: rgba(97, 218, 251, 0.15);
-    color: #61DAFB;
+.badge-figma {
+    top: 50px;
+    left: 0;
+    background: rgba(162, 89, 255, 0.15);
+    color: #A259FF;
     animation-delay: 0s;
 }
 
-.badge-js {
+.badge-ps {
+    top: 20px;
+    right: 10px;
+    background: rgba(49, 168, 255, 0.15);
+    color: #31A8FF;
+    animation-delay: 0.5s;
+}
+
+.badge-ai {
     bottom: 60px;
     right: -10px;
-    background: rgba(247, 223, 30, 0.15);
-    color: #F7DF1E;
-    animation-delay: 0.5s;
+    background: rgba(255, 124, 0, 0.15);
+    color: #FF7C00;
+    animation-delay: 1s;
 }
 
 .badge-wordpress {
@@ -704,14 +712,6 @@ ul, ol {
     left: -10px;
     background: rgba(33, 117, 155, 0.15);
     color: #21759B;
-    animation-delay: 1s;
-}
-
-.badge-figma {
-    top: 50px;
-    left: 0;
-    background: rgba(162, 89, 255, 0.15);
-    color: #A259FF;
     animation-delay: 1.5s;
 }
 

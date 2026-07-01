@@ -1,6 +1,6 @@
 /* ========================================
    PORTFOLIO - MAIN JAVASCRIPT
-   Rohit Kumar | Front End Developer
+   Abhishek Kumar | Graphic & UI/UX Designer
    ======================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -91,12 +91,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // TYPING EFFECT
     // ==========================================
     const typingTexts = [
-        'Front End Developer',
-        'Website Designer',
-        'React.js Developer',
-        'WordPress Expert',
+        'UI/UX Designer',
         'Graphic Designer',
-        'UI/UX Designer'
+        'WordPress Designer',
+        'Website Designer',
+        'Creative Designer'
     ];
 
     let textIndex = 0;
@@ -285,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
             message: formData.get('message')
         };
 
-        fetch('https://formsubmit.co/ajax/rohitkumar837r@gmail.com', {
+        fetch('https://formsubmit.co/ajax/abhishekkumar66672@gmail.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

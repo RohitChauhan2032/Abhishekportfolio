@@ -1,4 +1,4 @@
-# Portfolio - Rohit Kumar
+# Portfolio - Abhishek Kumar
 
 Personal portfolio website built with HTML, CSS & JavaScript.
 
