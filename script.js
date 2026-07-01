@@ -244,25 +244,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
 
+    function applyFilter(filter) {
+        projectCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            const isFeatured = card.getAttribute('data-featured') === 'true';
+
+            let show = false;
+            if (filter === 'all') {
+                // "All" tab: show featured items only (6 chosen social posts + all websites + all mobile apps)
+                show = isFeatured;
+            } else {
+                // Specific category tab: show ALL items of that category
+                show = (category === filter);
+            }
+
+            if (show) {
+                card.classList.remove('hidden');
+                card.style.animation = 'fadeIn 0.5s ease forwards';
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+    }
+
+    // Apply default filter on page load
+    applyFilter('all');
+
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const filter = btn.getAttribute('data-filter');
-
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
-            projectCards.forEach(card => {
-                const category = card.getAttribute('data-category');
-
-                if (filter === 'all' || category === filter) {
-                    card.classList.remove('hidden');
-                    card.style.animation = 'fadeIn 0.5s ease forwards';
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
+            applyFilter(filter);
         });
     });
+
 
     // ==========================================
     // CONTACT FORM
@@ -292,29 +308,29 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             body: JSON.stringify(data)
         })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(res => {
-            submitBtn.innerHTML = '<span>Message Sent!</span><i class="fas fa-check"></i>';
-            submitBtn.style.background = 'linear-gradient(135deg, #00D4AA, #00B894)';
-            contactForm.reset();
-        })
-        .catch(error => {
-            console.error('Error submitting form:', error);
-            submitBtn.innerHTML = '<span>Failed to Send</span><i class="fas fa-times"></i>';
-            submitBtn.style.background = 'linear-gradient(135deg, #FF4B4B, #FF2F2F)';
-        })
-        .finally(() => {
-            setTimeout(() => {
-                submitBtn.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
-                submitBtn.style.background = '';
-                submitBtn.disabled = false;
-            }, 4000);
-        });
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(res => {
+                submitBtn.innerHTML = '<span>Message Sent!</span><i class="fas fa-check"></i>';
+                submitBtn.style.background = 'linear-gradient(135deg, #00D4AA, #00B894)';
+                contactForm.reset();
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+                submitBtn.innerHTML = '<span>Failed to Send</span><i class="fas fa-times"></i>';
+                submitBtn.style.background = 'linear-gradient(135deg, #FF4B4B, #FF2F2F)';
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    submitBtn.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
+                    submitBtn.style.background = '';
+                    submitBtn.disabled = false;
+                }, 4000);
+            });
     });
 
     // ==========================================
