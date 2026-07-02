@@ -663,7 +663,7 @@ ul, ol {
 
 .hero-image {
     width: 100%;
-    height: 70vh;
+    /* height: 70vh; */
     object-fit: cover;
     overflow: hidden;
 }
